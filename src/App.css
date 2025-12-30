@@ -189,28 +189,36 @@ section {
   gap: 1.5rem;
   margin-top: 2rem;
 }
-
 .btn {
   padding: 1rem 2rem;
   border-radius: 5rem;
   font-weight: 600;
-  border: 2px solid var(--primary-text);
+  /* The second value #353535 is the fallback if the variable fails */
+  border: 2px solid var(--primary-text, #353535); 
   background: transparent;
+  color: var(--primary-text, #353535); /* Force text color */
   cursor: pointer;
+  transition: all 300ms ease;
 }
 
 .btn-color-1 { 
-  background: var(--primary-text); 
+  background: var(--primary-text, #353535); 
   color: white; 
 }
 
 .btn-color-1:hover { 
-  background: var(--accent-color); 
-  border-color: var(--accent-color); 
+  background: var(--accent-color, #000000); 
+  border-color: var(--accent-color, #000000); 
+  color: white;
+}
+
+.btn-color-2 {
+  color: var(--primary-text, #353535);
 }
 
 .btn-color-2:hover { 
   background: #eeeeee; 
+  border-color: #353535;
 }
 
 /* ==========================================================================
@@ -249,6 +257,60 @@ section {
   transform: scale(1.2);
   filter: brightness(1.2);
 }
+
+/* ==========================================================================
+   EDUCATION SECTION
+   ========================================================================== */
+
+/* Skills Badge Styling */
+.skills-badge-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.skill-badge {
+  padding: 0.8rem 1.5rem;
+  background: white;
+  border: 1px solid #353535;
+  border-radius: 2rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  cursor: default;
+  transition: all 300ms ease;
+}
+
+/* Hover Effect */
+.skill-badge:hover {
+  background: #353535;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Education Text Styling */
+.education-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.sub-detail {
+  font-size: 0.9rem;
+  color: #555;
+  font-style: italic;
+}
+
+.merits {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.3rem;
+}
+
 
 /* ==========================================================================
    PROJECTS SECTION
