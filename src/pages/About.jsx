@@ -1,34 +1,33 @@
 import "../App.css";
+// 1. Import your assets
+import profilePic from "../assets/profile-pic.jpg";
+import linkedinIcon from "../assets/linkedin.png";
+import githubIcon from "../assets/github.png";
+import resumePdf from "../assets/Resume.pdf";
 
 const About = () => {
   return (
     <section id="profile">
       <div className="section__pic-container">
-        <img src="/assets/profile-pic.jpg" alt="ThawZin Htun profile picture" />
+        {/* 2. Use the variable name, NOT a string */}
+        <img src={profilePic} alt="ThawZin Htun profile picture" />
       </div>
       <div className="section__text">
         <p className="section__text__p1">Hello, I'm</p>
         <h1 className="title">ThawZin Htun</h1>
-        <p className="section__text__p2">I am a Software Engineer specializing in Applied Artificial Intelligence. 
-          Currently pursuing a BSc in Applied AI at Singapore Institute of Technology (est. 2028), 
-          I hold a Diploma in IT from Singapore Polytechnic, with a focus on Software Engineering and
-           a minor in 5G & AIoT. I combine strong software development skills with AI expertise 
-           to build intelligent, practical solutions.</p>
+        {/* ... description ... */}
         
         <div className="btn-container">
-          <button className="btn btn-color-2" onClick={() => window.open('/assets/Resume.pdf')}>
+          <button className="btn btn-color-2" onClick={() => window.open(resumePdf)}>
             Resume
           </button>
-          <button className="btn btn-color-1" onClick={() => window.location.href='/contact'}>
-            Contact Info
-          </button>
+          {/* ... contact button ... */}
         </div>
 
-        {/* Improved Socials Layout */}
         <div id="socials-container">
           <div className="social-icon-wrapper">
             <img 
-              src="/assets/linkedin.png" 
+              src={linkedinIcon} 
               alt="LinkedIn" 
               className="social-icon" 
               onClick={() => window.open('https://www.linkedin.com/in/thawzin-htun/', '_blank')} 
@@ -36,7 +35,7 @@ const About = () => {
           </div>
           <div className="social-icon-wrapper">
             <img 
-              src="/assets/github.png" 
+              src={githubIcon} 
               alt="Github" 
               className="social-icon" 
               onClick={() => window.open('https://github.com/thawzin07', '_blank')} 

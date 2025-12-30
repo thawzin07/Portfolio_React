@@ -1,4 +1,8 @@
 import "../App.css";
+// 1. Import icons from your src/assets folder
+import emailIcon from "../assets/email.png";
+import linkedinIcon from "../assets/linkedin.png";
+import githubIcon from "../assets/github.png";
 
 const Contact = () => {
   return (
@@ -12,14 +16,15 @@ const Contact = () => {
         {/* Main Direct Contact Cards */}
         <div className="contact-methods">
           <div className="contact-card details-container">
-            <img src="/assets/email.png" alt="Email" className="icon contact-icon" />
+            {/* 2. Use the variable name in the src attribute */}
+            <img src={emailIcon} alt="Email" className="icon contact-icon" />
             <h3>Email</h3>
             <p>john.doe.ai@email.com</p>
             <a href="mailto:john.doe.ai@email.com" className="contact-link">Send Message</a>
           </div>
 
           <div className="contact-card details-container">
-            <img src="/assets/linkedin.png" alt="LinkedIn" className="icon contact-icon" />
+            <img src={linkedinIcon} alt="LinkedIn" className="icon contact-icon" />
             <h3>LinkedIn</h3>
             <p>Professional Network</p>
             <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="contact-link">Connect Now</a>
@@ -30,11 +35,9 @@ const Contact = () => {
         <div className="ai-networks-container">
           <h2 className="sub-title">Research & Code</h2>
           <div className="network-grid">
-            
-            
             <a href="https://github.com/thawzin07" target="_blank" rel="noreferrer" className="network-card details-container">
               <div className="network-content">
-                <img src="/assets/github.png" className="icon" alt="GitHub" />
+                <img src={githubIcon} className="icon" alt="GitHub" />
                 <div>
                   <h3>GitHub</h3>
                   <p>View My Repositories</p>

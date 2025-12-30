@@ -1,4 +1,5 @@
 import "../App.css";
+import checkmarkIcon from "../assets/checkmark.png";
 
 const Education = () => {
   const skills = [
@@ -17,7 +18,7 @@ const Education = () => {
             <div className="article-container">
               {skill.items.map(item => (
                 <article key={item}>
-                  <img src="/assets/checkmark.png" className="icon" alt="Check" />
+                  <img src={checkmarkIcon} className="icon" alt="Check" />
                   <div>
                     <h3>{item}</h3>
                     <p>Proficient</p>

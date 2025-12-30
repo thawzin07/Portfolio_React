@@ -1,9 +1,21 @@
 import "../App.css";
+// 1. Import your project images from the src/assets folder
+import project1Img from "../assets/project-1.png";
+import project2Img from "../assets/project-2.png";
 
 const Projects = () => {
   const myProjects = [
-    { title: "Project One", img: "/assets/project-1.png", tags: ["HTML", "CSS", "JS"] },
-    { title: "Project Two", img: "/assets/project-2.png", tags: ["React", "Node"] }
+    { 
+      title: "Project One", 
+      // 2. Use the imported variable name instead of a string path
+      img: project1Img, 
+      tags: ["HTML", "CSS", "JS"] 
+    },
+    { 
+      title: "Project Two", 
+      img: project2Img, 
+      tags: ["React", "Node"] 
+    }
   ];
 
   return (
@@ -14,6 +26,7 @@ const Projects = () => {
         {myProjects.map((project, index) => (
           <div key={index} className="project-card details-container color-container">
             <div className="project-img-wrapper">
+              {/* project.img now holds the correct Vite-processed path */}
               <img src={project.img} alt={project.title} className="project-img" />
             </div>
             <h2 className="project-title">{project.title}</h2>
@@ -23,7 +36,7 @@ const Projects = () => {
               ))}
             </div>
             <div className="btn-container">
-              <button className="btn btn-color-2" onClick={() => window.open('#')}>Github</button>
+              <button className="btn btn-color-2" onClick={() => window.open('https://github.com/thawzin07')}>Github</button>
               <button className="btn btn-color-2" onClick={() => window.open('#')}>Demo</button>
             </div>
           </div>
