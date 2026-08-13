@@ -33,14 +33,15 @@ export const projects = [
     problem:
       "The project needed a complete gym management platform that could handle member bookings, billing, admin operations, notifications, and user support without relying on a heavy framework.",
     brief:
-      "A full-stack gym membership platform built with plain PHP and MySQL, combining member services, admin operations, Stripe billing, and AI-supported assistance.",
+      "A production-oriented academic gym management platform built with plain PHP, MySQL, Bootstrap, and vanilla JavaScript, covering member bookings, waitlists, admin workflows, database-backed operations, and an OpenAI chatbot.",
     role:
-      "Full-stack PHP/MVC owner across core app architecture, booking, Stripe billing, AI assistance, security, and VM deployment.",
+      "Full-stack PHP/MVC contributor and deployment owner across core architecture, booking workflows, AI assistance, security hardening, and the migration from Google Cloud VM hosting to InfinityFree.",
     contributions: [
       "Scaffolded the PHP MVC baseline with routing, controllers, models, views, setup docs, and the booking/waitlist flow.",
       "Implemented Stripe membership billing, payment reconciliation, checkout notifications, and member billing dashboard updates.",
       "Built the OpenAI gym-scoped chatbot with persistent history, UI polish, route wiring, config, and accessibility fixes.",
-      "Hardened validation/security with prepared statements, CSRF, escaping, role checks, SQL asset cleanup, and VM GitHub Actions deployment.",
+      "Hardened validation and security with prepared statements, CSRF, escaping, role checks, SQL asset cleanup, production error handling, clean URL routing, and shared-host configuration.",
+      "Migrated the public showcase after Google Cloud credits expired, configured the PHP/MySQL deployment on zero-cost InfinityFree hosting, and verified the live public routes.",
     ],
     tags: [
       "PHP 8",
@@ -51,13 +52,14 @@ export const projects = [
       "OpenAI API",
       "PHPMailer",
       "GitHub Actions",
-      "Google Cloud VM",
+      "Google Cloud VM (historical)",
+      "InfinityFree",
     ],
     github:
       "https://github.com/thawzin07/SIT_Tri2_WebSystemsAndTechnologiesGroupProject",
-    demo: "http://34.142.168.168/",
+    demo: "https://websys.infinityfree.me/",
     video: "https://www.youtube.com/watch?v=bDHM5iRpshQ",
-    branches: ["thawzin-dev", "vm_hosting"],
+    branches: ["main", "thawzin-dev", "vm_hosting"],
   },
   {
     slug: "speedup",

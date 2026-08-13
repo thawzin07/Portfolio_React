@@ -20,8 +20,8 @@ Live site: [https://thawzinhtun.com/](https://thawzinhtun.com/)
 
 ## Featured Projects
 
-- PulsePoint Fitness: full-stack gym membership platform with PHP, MySQL, Bootstrap, Stripe, admin workflows, and security basics.
-  - Live demo: [http://34.142.168.168/](http://34.142.168.168/)
+- PulsePoint Fitness: production-oriented academic gym management platform with PHP, MySQL, Bootstrap, vanilla JavaScript, admin/member workflows, security hardening, and an OpenAI chatbot. The public showcase was migrated from an expired Google Cloud VM to zero-cost InfinityFree hosting; payment, email, webhook, and background-worker integrations are not enabled on the free shared-host deployment.
+  - Live demo: [https://websys.infinityfree.me/](https://websys.infinityfree.me/)
   - GitHub: [https://github.com/thawzin07/SIT_Tri2_WebSystemsAndTechnologiesGroupProject](https://github.com/thawzin07/SIT_Tri2_WebSystemsAndTechnologiesGroupProject)
 - SpeedUp: AI learning platform using OpenAI, Node.js, Firebase, Cloudinary, and a Render-hosted backend.
   - Live demo: [https://greymatter-dlweek.github.io/speedup/](https://greymatter-dlweek.github.io/speedup/)
